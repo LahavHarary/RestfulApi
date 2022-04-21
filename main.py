@@ -6,7 +6,7 @@ from Stats import Stats
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(Stats, "/api/v1/stats/<int:num_of_file_from_user>")
+api.add_resource(Stats, "/api/v1/stats/")
 api.add_resource(Attack, "/api/v1/attack/<string:vm_id_from_user>")
 
 if(__name__) == "__main__":
