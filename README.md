@@ -4,5 +4,7 @@
 Python Rest Api project
 <br>
 This project consists of 4 json files that contain data about virtual machines and firewall rules.
+<br>
 Each file contains different machines and different firewall rules.
+<br>
 The Api goal is to check whether a vm can be accessed from a different machine inside its folder.
