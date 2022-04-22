@@ -1,5 +1,8 @@
 import requests
 
+# A test class for every vm in input-x.json
+# for example to test every vm in the file with index 0 call testInput0()
+
 BASE = "http://127.0.0.1:5000/api/v1"
 
 def testInput0():
