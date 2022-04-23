@@ -70,8 +70,23 @@ def testInput3():
                 print("test no ", TestCounter, " failed")
         TestCounter += 1
     print("")
+def testVmIdsThatDoesntExist():
+    print("_________START OF TEST NAME: testVmIdsThatDoesntExist_________")
+    vms = ['vm-9ea399', 'vm5f3ad2b', 'vm-d9e0825A', 'vm-11211',
+           'vm-afA0a0A92', 'IronMan', 'v', 'vmush','YossiVm-864a94f']
 
-#testInput0()
-#testInput1()
-#testInput2()
-#testInput3()
+    TestCounter = 0
+    for vm in vms:
+        response = requests.get(BASE + "/attack/" + vm)
+        if (response.json() == vms):
+            print("test no ", TestCounter, " failed")
+        else:
+            print("test no ", TestCounter, " succeeded")
+        TestCounter += 1
+    print("")
+
+testInput0()
+testInput1()
+testInput2()
+testInput3()
+testVmIdsThatDoesntExist()
